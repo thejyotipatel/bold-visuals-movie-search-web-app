@@ -1,0 +1,208 @@
+/* utility classes */
+
+/* text color */
+
+// text primary
+.text-primary-100 {
+  color: $clr-primary-100;
+}
+.text-primary-200 {
+  color: $clr-primary-200;
+}
+.text-primary-300 {
+  color: $clr-primary-300;
+}
+
+// text accent
+.text-accent-100 {
+  color: $clr-accent-100;
+}
+.text-accent-200 {
+  color: $clr-accent-200;
+}
+.text-accent-300 {
+  color: $clr-accent-300;
+}
+.text-accent-400 {
+  color: $clr-accent-400;
+}
+.text-accent-500 {
+  color: $clr-accent-500;
+}
+.text-accent-600 {
+  color: $clr-accent-600;
+}
+.text-accent-700 {
+  color: $clr-accent-700;
+}
+.text-accent-800 {
+  color: $clr-accent-800;
+}
+.text-accent-900 {
+  color: $clr-accent-900;
+}
+
+// text neutral
+.text-neutral-100 {
+  color: $clr-neutral-100;
+}
+.text-neutral-200 {
+  color: $clr-neutral-200;
+}
+.text-neutral-300 {
+  color: $clr-neutral-300;
+}
+.text-neutral-400 {
+  color: $clr-neutral-400;
+}
+.text-neutral-500 {
+  color: $clr-neutral-500;
+}
+.text-neutral-600 {
+  color: $clr-neutral-600;
+}
+.text-neutral-700 {
+  color: $clr-neutral-700;
+}
+.text-neutral-800 {
+  color: $clr-neutral-800;
+}
+.text-neutral-900 {
+  color: $clr-neutral-900;
+}
+
+/* background color */
+
+// background primary
+.bg-primary-100 {
+  background-color: $clr-primary-100;
+}
+.bg-primary-200 {
+  background-color: $clr-primary-200;
+}
+.bg-primary-300 {
+  background-color: $clr-primary-300;
+}
+
+// background accent
+.bg-accent-100 {
+  color: $clr-accent-100;
+}
+.bg-accent-200 {
+  color: $clr-accent-200;
+}
+.bg-accent-300 {
+  color: $clr-accent-300;
+}
+.bg-accent-400 {
+  color: $clr-accent-400;
+}
+.bg-accent-500 {
+  color: $clr-accent-500;
+}
+.bg-accent-600 {
+  color: $clr-accent-600;
+}
+.bg-accent-700 {
+  color: $clr-accent-700;
+}
+.bg-accent-800 {
+  color: $clr-accent-800;
+}
+.bg-accent-900 {
+  color: $clr-accent-900;
+}
+
+// background neutral
+.bg-neutral-100 {
+  color: $clr-neutral-100;
+}
+.bg-neutral-200 {
+  color: $clr-neutral-200;
+}
+.bg-neutral-300 {
+  color: $clr-neutral-300;
+}
+.bg-neutral-400 {
+  color: $clr-neutral-400;
+}
+.bg-neutral-500 {
+  color: $clr-neutral-500;
+}
+.bg-neutral-600 {
+  color: $clr-neutral-600;
+}
+.bg-neutral-700 {
+  color: $clr-neutral-700;
+}
+.bg-neutral-800 {
+  color: $clr-neutral-800;
+}
+.bg-neutral-900 {
+  color: $clr-neutral-900;
+}
+
+/* font-weight */
+.fw-300 {
+  font-weight: $fw-300;
+}
+.fw-400 {
+  font-weight: $fw-400;
+}
+.fw-500 {
+  font-weight: $fw-500;
+}
+.fw-600 {
+  font-weight: $fw-600;
+}
+
+/* font-size */
+.fs-100 {
+  font-size: $fs-100;
+}
+.fs-200 {
+  font-size: $fs-200;
+}
+.fs-300 {
+  font-size: $fs-300;
+}
+.fs-400 {
+  font-size: $fs-400;
+}
+.fs-500 {
+  font-size: $fs-500;
+}
+.fs-600 {
+  font-size: $fs-600;
+}
+.fs-700 {
+  font-size: $fs-700;
+}
+.fs-800 {
+  font-size: $fs-800;
+}
+.fs-900 {
+  font-size: $fs-900;
+}
+
+// box shadow
+.bxs-1 {
+  box-shadow: $bxs-1;
+}
+.bxs-2 {
+  box-shadow: $bxs-2;
+}
+.bxs-3 {
+  box-shadow: $bxs-3;
+}
+.bxs-4 {
+  box-shadow: $bxs-4;
+}
+
+.transition {
+  transition: $transition;
+}
+
+.borderRadius {
+  border-radius: $borderRadius;
+}

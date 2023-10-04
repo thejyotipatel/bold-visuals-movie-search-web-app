@@ -1,0 +1,79 @@
+/* colors */
+$clr-accent-100: #fcebe9;
+$clr-accent-200: #f6c3bc;
+$clr-accent-300: #f09b8f;
+$clr-accent-400: #ea7362;
+$clr-accent-500: #e44b35;
+$clr-accent-600: #ca321b;
+$clr-accent-700: #ca321b;
+$clr-accent-800: #9d2715;
+$clr-accent-900: #431109;
+
+$clr-primary-100: #ea7564; //
+$clr-primary-200: #00acee;
+$clr-primary-300: #62c4b7; //
+
+/* neutral */
+$clr-neutral-50: #f8fafc;
+$clr-neutral-100: #f1f5f9;
+$clr-neutral-200: #e2e8f0;
+$clr-neutral-300: #cbd5e1;
+$clr-neutral-400: #94a3b8;
+$clr-neutral-500: #64748b;
+$clr-neutral-600: #475569;
+$clr-neutral-700: #334155;
+$clr-neutral-800: #1e293b;
+$clr-neutral-900: #0f172a;
+
+/* rest of the colors */
+$clr-black: #222;
+$clr-white: #fff;
+$clr-red-light: #f8d7da;
+$clr-red-dark: #842029;
+$clr-green-light: #d1e7dd;
+$clr-green-dark: #0f5132;
+
+$ff-primery: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, helvetica,
+  'helvetica neue', ubuntu, roboto, noto, 'segoe ui', arial, sans-serif;
+
+$ff-body: $ff-primery;
+
+$fw-300: 300;
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+
+$fs-100: 10px;
+$fs-200: 12px;
+$fs-300: 14px;
+$fs-400: 16px;
+$fs-500: 18px;
+$fs-600: 20px;
+$fs-700: 28px;
+$fs-800: 38px;
+$fs-900: 46px;
+
+$fs-body: calc(10px + 2vmin);
+
+$borderRadius: 0.25rem;
+$letterSpacing: 1px;
+$transition: 0.3s ease-in-out all;
+$max-width: 1120px;
+$fixed-width: 600px;
+$view-width: 90vw;
+
+$space-xxl: 4rem;
+$space-xl: 3rem;
+$space-l: 2rem;
+$space-m: 1.5rem;
+$space-s: 1rem;
+$space-xs: 0.75rem;
+$space-xxs: 0.5rem;
+
+$bxs-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+$bxs-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$bxs-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$bxs-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+$d-border: 2px solid hotpink;
