@@ -1,9 +1,9 @@
-body {
+:root {
   font-family: $ff-body;
 
   font-weight: $fw-400;
 
-  color-scheme: light dark;
+  color-scheme: dark light;
   color: $clr-neutral-900;
   background-color: $clr-accent-100;
 
@@ -14,7 +14,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 @media (prefers-color-scheme: light) {
-  body {
+  :root {
     color: $clr-accent-100;
     background-color: $clr-neutral-900;
   }
