@@ -8,7 +8,7 @@ const Navbar = () => {
     <>
       <div className='nav-center'>
         <NavLink to='/' className='logo fs-700 fw-600 text-accent-500'>
-          BookMaster
+          Bold Visuals
         </NavLink>
 
         <div className='nav-links'>
@@ -18,8 +18,8 @@ const Navbar = () => {
           <NavLink to='/about' className='nav-link'>
             About
           </NavLink>
-          <NavLink to='/book' className='nav-link'>
-            Book
+          <NavLink to='/images' className='nav-link'>
+            Images
           </NavLink>
           <NavLink to='/newsLatter' className='nav-link'>
             NewsLatter
@@ -41,8 +41,8 @@ const Navbar = () => {
             <NavLink to='/about' className='nav-mobile'>
               About
             </NavLink>
-            <NavLink to='/book' className='nav-mobile'>
-              Book
+            <NavLink to='/images' className='nav-mobile'>
+              Images
             </NavLink>
             <NavLink to='/newsLatter' className='nav-mobile'>
               NewsLatter

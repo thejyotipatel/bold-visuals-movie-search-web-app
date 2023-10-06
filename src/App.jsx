@@ -1,6 +1,14 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { About, Book, Error, HomeLayout, Landing, NewsLatter } from './pages'
-
+import {
+  About,
+  Images,
+  Error,
+  HomeLayout,
+  Landing,
+  NewsLatter,
+  SinglePageError,
+} from './pages'
+import { loader as loadingLoader } from './pages/Landing'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -9,10 +17,12 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
+        loader: loadingLoader,
+        errorElement: <SinglePageError />,
       },
       {
-        path: 'book',
-        element: <Book />,
+        path: 'images/:id',
+        element: <Images />,
       },
       {
         path: 'newslatter',
