@@ -17,10 +17,10 @@ const ImageCard = ({ item }) => {
         <img src={urls?.full} alt={alt_description} className='img' />
       </div>
       <div className='img-footer'>
-        <p className=''>{alt_description}</p>
+        <p className='text-neutral-500 fw-300 fs-400'>{alt_description}</p>
         <Link
           to={`/images/${id}`}
-          className='btn bg-accent-500 text-accent-100'
+          className='btn  bg-accent-500 text-accent-100'
         >
           Image details
         </Link>
