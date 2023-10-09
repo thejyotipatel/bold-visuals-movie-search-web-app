@@ -9,6 +9,7 @@ import {
   SinglePageError,
 } from './pages'
 import { loader as loadingLoader } from './pages/Landing'
+import { loader as singleImagesLoader } from './pages/Images'
 const router = createBrowserRouter([
   {
     path: '/',
@@ -23,6 +24,8 @@ const router = createBrowserRouter([
       {
         path: 'images/:id',
         element: <Images />,
+        loader: singleImagesLoader,
+        errorElement: <SinglePageError />,
       },
       {
         path: 'newslatter',

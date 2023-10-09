@@ -1,0 +1,38 @@
+.img-card-center {
+  & .btn {
+    background: $clr-accent-500;
+    color: $clr-accent-100;
+    margin: $space-l 0;
+  }
+
+  & .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: $space-l;
+    align-items: end;
+    & .card-img {
+      max-height: 400px;
+      overflow: hidden;
+    }
+    & .card-info {
+      & p {
+        margin: $space-s 0;
+        color: $clr-neutral-800;
+        font-size: $fs-500;
+        font-weight: $fw-500;
+        & span {
+          margin-right: 0.5em;
+          background-color: $clr-accent-300;
+          padding: 0.3rem 0.5rem;
+          color: $clr-accent-900;
+          border-radius: $borderRadius;
+          text-transform: capitalize;
+        }
+      }
+      & a {
+        color: $clr-accent-500;
+        text-decoration: underline;
+      }
+    }
+  }
+}

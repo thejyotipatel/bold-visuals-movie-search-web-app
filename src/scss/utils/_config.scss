@@ -10,7 +10,6 @@ img {
 }
 
 .container {
-  $padding: 1rem;
   width: calc(min($max-width, $view-width));
   margin-inline: auto;
 }
@@ -28,5 +27,34 @@ img {
 
   &:hover {
     box-shadow: $bxs-3;
+  }
+}
+
+// loading
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spanner {
+  width: 4rem;
+  height: 4rem;
+  border: 5px solid $clr-neutral-300;
+  border-radius: 50%;
+  border-top-color: $clr-accent-500;
+  animation: spinner 0.6s linear infinite;
+}
+
+// error page
+
+.error-center {
+  // width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & .error-img {
+    max-width: 600px;
   }
 }

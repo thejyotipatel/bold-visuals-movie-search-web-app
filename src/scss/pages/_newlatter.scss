@@ -1,0 +1,36 @@
+.newlatter {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  & .newlatter-center {
+    background-color: $clr-neutral-50;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    // max-width: 600px;
+    width: 100%;
+    margin-top: $space-xxl;
+
+    & .form {
+      display: grid;
+      gap: $space-s;
+      margin: $space-xl $space-l;
+      grid-template-columns: auto;
+
+      & .form-label {
+        text-transform: capitalize;
+        font-size: $fs-400;
+        font-weight: $fw-500;
+        margin: 1em;
+        width: 100%;
+      }
+
+      & .form-input {
+        font-size: $fs-400;
+        font-weight: $fw-500;
+        padding: 0.3rem;
+        width: 100%;
+      }
+    }
+  }
+}

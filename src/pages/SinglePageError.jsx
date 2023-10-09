@@ -1,4 +1,6 @@
+import { useRouteError } from 'react-router-dom'
 const SinglePageError = () => {
-  return <h1>No images found...</h1>
+  const error = useRouteError()
+  return <h4 style={{ margin: '2rem 0' }}>{error.message}</h4>
 }
 export default SinglePageError
