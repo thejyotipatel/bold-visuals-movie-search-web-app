@@ -10,7 +10,13 @@ const HomeLayout = () => {
     <>
       <Navbar />
       <div className='container'>
-        {isPageLoading ? <div className='loading-spanner'> </div> : <Outlet />}
+        {isPageLoading ? (
+          <div className='loading-center'>
+            <div className='loading-spanner' />
+          </div>
+        ) : (
+          <Outlet />
+        )}
       </div>
       <Footer />
     </>

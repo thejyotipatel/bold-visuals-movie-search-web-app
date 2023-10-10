@@ -1,8 +1,22 @@
+import { Form, redirect, useNavigation } from 'react-router-dom'
+import { toast } from 'react-toastify'
+
+export const action = async ({ request }) => {
+  const formData = await request.formData()
+  const data = Object.fromEntries(formData)
+  // console.log(data)
+  if (data) toast.success('success check your email')
+  return redirect('/')
+}
+
 const NewsLatter = () => {
+  const navigation = useNavigation()
+  const isSubmiting = navigation.state === 'submitting'
+
   return (
     <div className='newlatter'>
       <div className='newlatter-center  '>
-        <form className='form'>
+        <Form className='form' method='POST'>
           <h3>NewsLatter</h3>
           {/* name */}
           <div className='form-control'>
@@ -15,6 +29,7 @@ const NewsLatter = () => {
               id='name'
               className='form-input'
               defaultValue='max'
+              required
             />
           </div>
           {/* lastName */}
@@ -37,6 +52,7 @@ const NewsLatter = () => {
             </label>
             <input
               type='email'
+              required
               name='email'
               id='email'
               defaultValue='test@test.com'
@@ -44,10 +60,10 @@ const NewsLatter = () => {
             />
           </div>
 
-          <button type='submit' className='btn'>
-            send
+          <button type='submit' className='btn' disabled={isSubmiting}>
+            {isSubmiting ? 'sending...' : 'send'}
           </button>
-        </form>
+        </Form>
       </div>
     </div>
   )

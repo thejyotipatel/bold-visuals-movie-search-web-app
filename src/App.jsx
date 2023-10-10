@@ -1,4 +1,5 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import {
   About,
   Images,
@@ -10,6 +11,16 @@ import {
 } from './pages'
 import { loader as loadingLoader } from './pages/Landing'
 import { loader as singleImagesLoader } from './pages/Images'
+import { action as newLatterAction } from './pages/NewsLatter'
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 100 * 60 * 5,
+    },
+  },
+})
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -30,6 +41,8 @@ const router = createBrowserRouter([
       {
         path: 'newslatter',
         element: <NewsLatter />,
+        action: newLatterAction,
+        errorElement: <SinglePageError />,
       },
       {
         path: 'about',
@@ -45,7 +58,11 @@ const router = createBrowserRouter([
 ])
 
 function App() {
-  return <RouterProvider router={router} />
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  )
 }
 
 export default App
