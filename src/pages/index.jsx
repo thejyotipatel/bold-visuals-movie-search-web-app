@@ -1,5 +1,5 @@
 export { default as About } from './About'
-export { default as Images } from './Images'
+export { default as Movie } from './Movie'
 export { default as HomeLayout } from './HomeLayout'
 export { default as Landing } from './Landing'
 export { default as NewsLatter } from './NewsLatter'

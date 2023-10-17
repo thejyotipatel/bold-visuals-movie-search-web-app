@@ -2,7 +2,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import {
   About,
-  Images,
+  Movie,
   Error,
   HomeLayout,
   Landing,
@@ -10,7 +10,7 @@ import {
   SinglePageError,
 } from './pages'
 import { loader as loadingLoader } from './pages/Landing'
-import { loader as singleImagesLoader } from './pages/Images'
+import { loader as singleMovieLoader } from './pages/Movie'
 import { action as newLatterAction } from './pages/NewsLatter'
 
 const queryClient = new QueryClient({
@@ -33,9 +33,9 @@ const router = createBrowserRouter([
         errorElement: <SinglePageError />,
       },
       {
-        path: 'images/:id',
-        element: <Images />,
-        loader: singleImagesLoader,
+        path: 'movie/:id',
+        element: <Movie />,
+        loader: singleMovieLoader,
         errorElement: <SinglePageError />,
       },
       {
@@ -59,9 +59,12 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
-    </QueryClientProvider>
+    <>
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
+      {/* <Landing /> */}
+    </>
   )
 }
 

@@ -1,6 +1,5 @@
 import { Outlet, useNavigation } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import About from './About'
 import Footer from '../components/Footer'
 
 const HomeLayout = () => {

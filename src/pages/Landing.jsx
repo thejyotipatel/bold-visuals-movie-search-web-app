@@ -1,25 +1,28 @@
 import axios from 'axios'
 import { useLoaderData } from 'react-router-dom'
-import ImageList from '../components/ImageList'
-import SearchForm from '../components/SearchForm'
-const URL = 'https://api.unsplash.com/search/photos/?client_id='
-export const loader = async ({ request }) => {
-  const url = new URL(request.url)
-  // console.log(url)
-  const searchTearm = url.searchParams.get('search') || 'book'
-  const response = await axios.get(
-    `${URL}${import.meta.env.VITE_CLIENT_ID}&query=${searchTearm}`
-  )
+import MovieList from '../components/MovieList'
+// import SearchForm from '../components/SearchForm'
 
-  return { images: response.data.results, searchTearm }
+const URL = 'https://yts.mx/api/v2/list_movies.json?quality=3D'
+
+export const loader = async ({ request }) => {
+  // const url = new URL(request.url)
+
+  // const searchTearm = url.searchParams.get('search') || 'book'
+  const { data } = await axios.get(`${URL}`)
+  // const response = await axios.get(
+  //   `${URL}${import.meta.env.VITE_CLIENT_ID}&query=${searchTearm}`
+  // )
+  // console.log(data.data.movies)
+  return { movies: data.data.movies }
 }
 const Landing = () => {
-  const { images, searchTearm } = useLoaderData()
+  const { movies } = useLoaderData()
   return (
     <>
-      <SearchForm searchTearm={searchTearm} />
+      {/* <SearchForm searchTearm={searchTearm} /> */}
       <div className='landing-center'>
-        <ImageList images={images} />
+        <MovieList movies={movies} />
       </div>
     </>
   )

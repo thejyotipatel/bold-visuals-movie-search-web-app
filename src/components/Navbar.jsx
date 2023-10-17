@@ -46,9 +46,7 @@ const Navbar = () => {
               <NavLink to='/about' className='nav-mobile' onClick={menuToggle}>
                 About
               </NavLink>
-              {/* <NavLink to='/images' className='nav-mobile' onClick={menuToggle}>
-                Images
-              </NavLink> */}
+
               <NavLink
                 to='/newsLatter'
                 className='nav-mobile'

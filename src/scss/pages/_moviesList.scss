@@ -2,15 +2,16 @@
   margin: 0 auto;
   padding: $space-xl 0;
 
-  & .images-list {
+  & .movie-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 
     gap: $space-s;
-    & .image-card {
+    & .movie-card {
       background-color: $clr-neutral-100;
       box-shadow: $bxs-4;
       transition: $transition;
+      border-radius: $borderRadius;
 
       &:hover,
       &:focus {
@@ -37,11 +38,10 @@
   }
 }
 
-@media (min-width: 768px) {
-  .landing-center {
-    & .images-list {
-      // grid-template-columns: repeat(3, 1fr);
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-  }
-}
+// @media (min-width: 768px) {
+//   .landing-center {
+//     & .movie-list {
+//       // grid-template-columns: repeat(auto-fill, minmax(0px, 1fr));
+//     }
+//   }
+// }
