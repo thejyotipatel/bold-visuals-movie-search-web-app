@@ -1,15 +1,33 @@
-import { useLoaderData, Link, Navigate } from 'react-router-dom'
+import { useLoaderData, Link, useNavigate, Navigate } from 'react-router-dom'
 import axios from 'axios'
+import { useQuery } from '@tanstack/react-query'
 const SingleImgURL = 'https://yts.mx/api/v2/movie_details.json'
-export const loader = async ({ params }) => {
-  const { id } = params
-  const { data } = await axios.get(`${SingleImgURL}?movie_id=${id}`)
-  console.log(data.data.movie)
-  return { id, movie: data.data.movie }
+
+const singleMovieQuery = (id) => {
+  return {
+    queryKey: ['movie', id],
+    queryFn: async () => {
+      const { data } = await axios.get(`${SingleImgURL}?movie_id=${id}`)
+
+      return data
+    },
+  }
 }
+export const loader =
+  (queryClient) =>
+  async ({ params }) => {
+    const { id } = params
+
+    await queryClient.ensureQueryData(singleMovieQuery(id))
+    return { id }
+  }
 
 const Movie = () => {
-  const { movie } = useLoaderData()
+  const { id } = useLoaderData()
+  const { data } = useQuery(singleMovieQuery(id))
+
+  const navigate = useNavigate()
+  const movie = data.data.movie
 
   if (!movie) return <Navigate to={'/'} />
 
@@ -30,9 +48,9 @@ const Movie = () => {
     <>
       <div className='container'>
         <div className='movie-card-center'>
-          <Link to={'/'} className='btn'>
+          <button onClick={() => navigate(-1)} className='btn'>
             Back home
-          </Link>
+          </button>
           <h1 className='movie-title'>{title_long}</h1>
           <div className='card-container'>
             <div className='card-img'>
@@ -49,7 +67,7 @@ const Movie = () => {
                 {runtime}min
               </p>
 
-              <p>
+              <p className='lang'>
                 <span>language :</span>
                 {language}
               </p>
@@ -63,9 +81,17 @@ const Movie = () => {
                 <span>MPA rating :</span>
                 {mpa_rating}
               </p>
+
+              <p>
+                <span>genres :</span>
+                {genres.join(', ')}
+              </p>
+
               <p className='desc'>
                 <span>description :</span>
-                {description_full}
+                {description_full
+                  ? `${description_full.substring(0, 500)}...`
+                  : ''}
               </p>
             </div>
           </div>

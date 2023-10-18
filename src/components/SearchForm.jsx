@@ -1,6 +1,6 @@
 import { Form, useNavigation } from 'react-router-dom'
 
-const SearchForm = () => {
+const SearchForm = ({ searchTearm }) => {
   const navigation = useNavigation()
   const isSubmiting = navigation.state === 'submitting'
   return (
@@ -13,8 +13,9 @@ const SearchForm = () => {
             id='search'
             defaultValue={searchTearm}
             className='form-input'
+            placeholder='Type here...'
           />
-          <button type='button' className='btn' disabled={isSubmiting}>
+          <button type='submit' className='btn' disabled={isSubmiting}>
             {isSubmiting ? 'searching...' : 'search'}
           </button>
         </Form>

@@ -28,20 +28,18 @@
       }
 
       & .img-footer {
+        & p {
+          font-size: $fs-400;
+          color: $clr-neutral-500;
+        }
         padding: $space-s;
 
         & .btn {
           margin-top: $space-xxs;
+          background-color: $clr-accent-500;
+          color: $clr-accent-100;
         }
       }
     }
   }
 }
-
-// @media (min-width: 768px) {
-//   .landing-center {
-//     & .movie-list {
-//       // grid-template-columns: repeat(auto-fill, minmax(0px, 1fr));
-//     }
-//   }
-// }

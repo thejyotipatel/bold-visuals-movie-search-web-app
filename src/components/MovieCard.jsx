@@ -8,11 +8,8 @@ const MovieCard = ({ item }) => {
         <img src={medium_cover_image} alt={slug || title} className='img' />
       </div>
       <div className='img-footer'>
-        <p className='text-neutral-500 fw-300 fs-400'>{title}</p>
-        <Link
-          to={`/movie/${id}`}
-          className='btn  bg-accent-500 text-accent-100'
-        >
+        <p>{title}</p>
+        <Link to={`/movie/${id}`} className='btn'>
           Movie details
         </Link>
       </div>

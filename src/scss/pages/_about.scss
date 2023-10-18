@@ -5,11 +5,9 @@
   }
   &-text {
     line-height: 2;
-    margin: $space-l auto;
+    margin: $space-s auto;
     color: $clr-neutral-500;
-  }
-}
-@media (min-width: 45em) {
-  .about {
+    font-weight: $fw-300;
+    font-size: $fs-400;
   }
 }

@@ -12,7 +12,7 @@ const Navbar = () => {
     <>
       <div className='nav-center  '>
         <div className=' container nav-container'>
-          <NavLink to='/' className='logo fs-700 fw-600 text-accent-500'>
+          <NavLink to='/' className='logo'>
             Bold Visuals
           </NavLink>
 
@@ -23,18 +23,13 @@ const Navbar = () => {
             <NavLink to='/about' className='nav-link'>
               About
             </NavLink>
-            {/* <NavLink to='/image' className='nav-link'>
-            Images
-          </NavLink> */}
+
             <NavLink to='/newsLatter' className='nav-link'>
               NewsLatter
             </NavLink>
           </div>
 
-          <button
-            className='menu-logo btn text-accent-500 fs-700 fw-700'
-            onClick={menuToggle}
-          >
+          <button className='menu-logo btn' onClick={menuToggle}>
             {menu ? <AiOutlineClose /> : <AiOutlineMenu />}
           </button>
 

@@ -1,7 +1,6 @@
 import MovieCard from './MovieCard'
 
 const MovieList = ({ movies }) => {
-  // console.log(movies)
   if (!movies) {
     return <h3>No movie found...</h3>
   }

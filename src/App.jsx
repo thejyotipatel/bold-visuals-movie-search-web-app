@@ -29,13 +29,13 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Landing />,
-        loader: loadingLoader,
+        loader: loadingLoader(queryClient),
         errorElement: <SinglePageError />,
       },
       {
         path: 'movie/:id',
         element: <Movie />,
-        loader: singleMovieLoader,
+        loader: singleMovieLoader(queryClient),
         errorElement: <SinglePageError />,
       },
       {
@@ -50,7 +50,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-
   {
     path: '*',
     element: <Error />,
@@ -63,7 +62,6 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
       </QueryClientProvider>
-      {/* <Landing /> */}
     </>
   )
 }
